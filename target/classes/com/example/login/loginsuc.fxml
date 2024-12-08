@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1460.0" styleClass="white-background" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.loginsucController">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="20.0" styleClass="white-background" stylesheets="@styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="61.0" prefWidth="300.0" text="afsa" textAlignment="CENTER" textFill="#ff1ea9">
+               <font>
+                  <Font name="Snell Roundhand" size="48.0" />
+               </font>
+            </Label>
+            <Separator maxHeight="-Infinity" orientation="VERTICAL" prefHeight="43.0" prefWidth="6.0" />
+            <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="35.0" prefWidth="300.0" styleClass="round-layout" stylesheets="@styles.css">
+               <children>
+                  <TextField prefHeight="26.0" prefWidth="256.0" promptText="search" styleClass="transparent" stylesheets="@styles.css" />
+               </children>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="mode" fitHeight="25.0" fitWidth="25.0" layoutX="499.0" layoutY="24.0" onMouseClicked="#modeOnMouseClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/mode.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="usernamelabelfx" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="238.0" text="username">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding></HBox>
+   </top>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="340.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="345.0" prefWidth="340.0" spacing="5.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="238.0" text="manage bills">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="74.0" prefWidth="340.0" spacing="15.0" styleClass="selected" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/bill2.png" />
+                           </image>
+                           <style>
+                              -fx-visibility: visible;
+                           </style>
+                        </ImageView>
+                        <Button fx:id="billview" mnemonicParsing="false" onAction="#billviewOnAction" prefHeight="30.0" prefWidth="134.0" style="-fx-background-color: #e96698;" text="consult my bills" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="56.0" prefHeight="74.0" prefWidth="340.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/pay.png" />
+                           </image>
+                           <style>
+                              -fx-visibility: visible;
+                           </style>
+                        </ImageView>
+                        <Button fx:id="paybills" mnemonicParsing="false" onAction="#paybillsOnAction" prefHeight="30.0" prefWidth="134.0" style="-fx-background-color: #e96698;" text="pay bills" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="13.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="74.0" prefWidth="340.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/2936980.png" />
+                           </image>
+                           <style>
+                              -fx-visibility: visible;
+                           </style>
+                        </ImageView>
+                        <Button fx:id="addcomplaint" mnemonicParsing="false" onAction="#addcomplaintOnAction" prefHeight="30.0" prefWidth="134.0" style="-fx-background-color: #e96698;" text="add complaint" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="13.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="204.0" prefHeight="74.0" prefWidth="340.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/statistics.png" />
+                           </image>
+                           <style>
+                              -fx-visibility: visible;
+                           </style>
+                        </ImageView>
+                        <Button fx:id="statics" mnemonicParsing="false" onAction="#staticsonAction" prefHeight="30.0" prefWidth="134.0" style="-fx-background-color: #e96698;" text="statistics" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="12.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="394.0" prefWidth="339.0" spacing="5.0">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="238.0" text="manage account">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="74.0" prefWidth="340.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/settingsimg.ong.png" />
+                           </image>
+                           <style>
+                              -fx-visibility: visible;
+                           </style>
+                        </ImageView>
+                        <Button fx:id="settingsfx" mnemonicParsing="false" onAction="#settingsOnAction" prefHeight="30.0" prefWidth="134.0" style="-fx-background-color: #e96698;" text="settings" textFill="#fcf3f9">
+                           <font>
+                              <Font name="Berlin Sans FB" size="13.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="56.0" prefHeight="74.0" prefWidth="340.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/profile.png" />
+                           </image>
+                           <style>
+                              -fx-visibility: visible;
+                           </style>
+                        </ImageView>
+                        <Button fx:id="consultprofile" mnemonicParsing="false" onAction="#consultprofileOnAction" prefHeight="30.0" prefWidth="134.0" style="-fx-background-color: #e96698;" text="consult profile" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="13.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="130.0" prefHeight="74.0" prefWidth="340.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/printb.png" />
+                           </image>
+                           <style>
+                              -fx-visibility: visible;
+                           </style>
+                        </ImageView>
+                        <Button fx:id="print" mnemonicParsing="false" onAction="#printOnAction" prefHeight="30.0" prefWidth="134.0" style="-fx-background-color: #e96698;" text="print bill" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="13.0" />
+                           </font></Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="227.0" prefHeight="74.0" prefWidth="340.0" spacing="15.0" styleClass="mouse-moved" stylesheets="@styles.css">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" style="&#10;                              -fx-visibility: visible;&#10;                           ">
+                           <image>
+                              <Image url="@img/logout.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="logout" mnemonicParsing="false" onAction="#logoutOnAction" prefHeight="30.0" prefWidth="134.0" style="-fx-background-color: #e96698;" text="log out" textFill="WHITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+         </children>
+         <stylesheets>
+            <URL value="@styles.css" />
+
+         </stylesheets>
+         <styleClass>
+            <String fx:value="white-background" />
+
+         </styleClass>
+      </VBox>
+   </left>
+</BorderPane>
