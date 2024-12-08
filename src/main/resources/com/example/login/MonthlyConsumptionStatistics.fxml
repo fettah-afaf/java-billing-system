@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="733.0" prefWidth="1109.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.MonthlyConsumptionStatistics">
+    <children>
+      <Label layoutX="313.0" layoutY="45.0" prefHeight="62.0" prefWidth="456.0" text="monthly consumption " textFill="#e96698">
+         <font>
+            <Font name="Berlin Sans FB" size="33.0" />
+         </font>
+      </Label>
+        <BarChart fx:id="barChart" layoutX="191.0" layoutY="188.0" prefHeight="492.0" prefWidth="678.0" title="Monthly Consumption">
+            <xAxis>
+                <CategoryAxis label="Month" side="BOTTOM" fx:id="xAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" label="Consumption" side="LEFT" upperBound="10000.0" />
+            </yAxis>
+        </BarChart>
+      <Label layoutX="106.0" layoutY="147.0" prefHeight="36.0" prefWidth="702.0" text="the total consumption of all users :">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

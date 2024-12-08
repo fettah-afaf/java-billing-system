@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="910.0" prefWidth="1117.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.login.ViewPayments">
+
+    <VBox alignment="CENTER" layoutX="14.0" layoutY="202.0" prefHeight="758.0" prefWidth="1067.0" spacing="10.0">
+
+        <HBox alignment="CENTER" prefHeight="27.0" prefWidth="1234.0" spacing="10.0">
+            <Label text="Enter username:">
+                <font>
+                    <Font name="System Bold Italic" size="14.0" />
+                </font></Label>
+            <TextField fx:id="usernameField" />
+            <Button onAction="#loadBillsButtonOnAction" style="-fx-background-color: #e96698;" text="Load Payments">
+            <font>
+               <Font name="Berlin Sans FB" size="13.0" />
+            </font></Button>
+        </HBox>
+
+        <AnchorPane prefHeight="735.0" prefWidth="1240.0">
+            <children>
+                <TableView fx:id="payment_table" layoutX="88.0" layoutY="92.0" prefHeight="647.0" prefWidth="1002.0">
+                    <columns>
+                        <TableColumn fx:id="payment_idcol" prefWidth="139.0" text="Payment ID" />
+                        <TableColumn fx:id="datecol" prefWidth="166.0" text="Date" />
+                        <TableColumn fx:id="id_billcol" prefWidth="133.0" text="Bill ID" />
+                        <TableColumn fx:id="amount_paycol" prefWidth="189.0" text="Amount Paid" />
+                    </columns>
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                </TableView>
+                <Label layoutX="39.0" layoutY="18.0" prefHeight="63.0" prefWidth="462.0" text="Here is the list of payments for the selected user:">
+                    <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                </Label>
+                <Label fx:id="messageLabel6" alignment="CENTER" layoutX="132.0" layoutY="6.0" prefHeight="18.0" prefWidth="639.0" textFill="#ff7171" />
+            </children>
+        </AnchorPane>
+
+    </VBox>
+   <Label layoutX="390.0" layoutY="79.0" prefHeight="54.0" prefWidth="391.0" text="view payments" textFill="#e96698">
+      <font>
+         <Font name="Berlin Sans FB" size="32.0" />
+      </font>
+   </Label>
+
+</AnchorPane>
